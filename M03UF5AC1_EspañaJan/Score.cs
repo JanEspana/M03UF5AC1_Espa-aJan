@@ -11,7 +11,7 @@ namespace M03UF5AC1_EspañaJan
     {
         public string? player { get; set; }
         public string? mission { get; set; }
-        public int score { get; set; }
+        public int scoring { get; set; }
         public void GetPlayer()
         {
             Console.WriteLine();
@@ -34,23 +34,23 @@ namespace M03UF5AC1_EspañaJan
                 GetMission();
             }
         }
-        public void GetScore()
+        public void GetScoring()
         {
             Console.WriteLine();
             Console.WriteLine("Introduce la puntuación: ");
             try
             {
-                score = Convert.ToInt32(Console.ReadLine());
-                if (!ScoreRegex(score))
+                scoring = Convert.ToInt32(Console.ReadLine());
+                if (!ScoreRegex(scoring))
                 {
                     Console.WriteLine("La puntuación no es válida.");
-                    GetScore();
+                    GetScoring();
                 }
             }
             catch (Exception)
             {
-                Console.WriteLine("La puntuación no es válida.");
-                GetScore();
+                Console.WriteLine("El formato no es válido, debe ser un número");
+                GetScoring();
             }
         }
 
@@ -61,7 +61,7 @@ namespace M03UF5AC1_EspañaJan
         }
         public bool MissionRegex(string mission)
         {
-            Regex regex = new Regex(@"^(Beta|Gamma|Delta|Zeta|Theta|Kappa|Lambda|Mi|Ni|Ksi|Rho|Sigma|Tau|Fi|Khi|Psi)-[0-9]{3}$");
+            Regex regex = new Regex(@"^(Alpha|Beta|Gamma|Delta|Epsilon|Zeta|Eta|Theta|Iota|Kappa|Lambda|Mu|Nu|Xi|Omicron|Pi|Rho|Sigma|Tau|Ypsilon|Phi|Chi|Psi|Omega)-[0-9]{3}$");
             return regex.IsMatch(mission);
         }
         public bool ScoreRegex(int score)
