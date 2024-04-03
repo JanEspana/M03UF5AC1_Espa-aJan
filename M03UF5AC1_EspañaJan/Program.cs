@@ -8,7 +8,7 @@ namespace M03UF5AC1_EspañaJan
         {
             List<Score> scoreList = new List<Score>();
             Console.WriteLine("---LISTA DE MISIONES---\n\n¡Bienvenido al listado de jugadores!");
-            for (int i = 0; i < 3; i++)
+            for (int i = 0; i < 10; i++)
             {
                 Score score = new Score();
                 score.GetPlayer();
