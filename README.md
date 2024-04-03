@@ -1,0 +1,1 @@
+No he utilizado internet para esto, solo he mirado los apuntes y me he ayudado un poco con Copilot (en el foreach que filtra por puntuaciones). No he necesitado buscar por qué funciona cada cosa, he leído el código hasta entender por qué es así.
