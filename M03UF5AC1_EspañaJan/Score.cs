@@ -12,45 +12,41 @@ namespace M03UF5AC1_EspañaJan
         public string? player { get; set; }
         public string? mission { get; set; }
         public int scoring { get; set; }
-        public void GetPlayer()
+        public void SetPlayer()
         {
-            Console.WriteLine();
-            Console.WriteLine("Introduce el nombre del jugador: ");
+            
             player = Console.ReadLine();
             if (!PlayerRegex(player))
             {
                 Console.WriteLine("El nombre del jugador no es válido.");
-                GetPlayer();
+                SetPlayer();
             }
         }
-        public void GetMission()
+        public void SetMission()
         {
-            Console.WriteLine();
-            Console.WriteLine("Introduce la misión: ");
+            
             mission = Console.ReadLine();
             if (!MissionRegex(mission))
             {
                 Console.WriteLine("La misión no es válida.");
-                GetMission();
+                SetMission();
             }
         }
-        public void GetScoring()
+        public void SetScoring()
         {
-            Console.WriteLine();
-            Console.WriteLine("Introduce la puntuación: ");
             try
             {
                 scoring = Convert.ToInt32(Console.ReadLine());
                 if (!ScoreRegex(scoring))
                 {
                     Console.WriteLine("La puntuación no es válida.");
-                    GetScoring();
+                    SetScoring();
                 }
             }
             catch (Exception)
             {
                 Console.WriteLine("El formato no es válido, debe ser un número");
-                GetScoring();
+                SetScoring();
             }
         }
 
@@ -66,11 +62,7 @@ namespace M03UF5AC1_EspañaJan
         }
         public bool ScoreRegex(int score)
         {
-            if (score >= 0 && score <= 500)
-            {
-                return true;
-            }
-            return false;
+            return (score >= 0 && score <= 500);
         }
     }
 }

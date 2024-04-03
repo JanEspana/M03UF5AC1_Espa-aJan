@@ -11,9 +11,15 @@ namespace M03UF5AC1_EspañaJan
             for (int i = 0; i < 10; i++)
             {
                 Score score = new Score();
-                score.GetPlayer();
-                score.GetMission();
-                score.GetScoring();
+                Console.WriteLine();
+                Console.WriteLine("Introduce el nombre del jugador: ");
+                score.SetPlayer();
+                Console.WriteLine();
+                Console.WriteLine("Introduce la misión: ");
+                score.SetMission();
+                Console.WriteLine();
+                Console.WriteLine("Introduce la puntuación: ");
+                score.SetScoring();
                 scoreList.Add(score);
             }
             GenerateUniqueRanking(scoreList);
